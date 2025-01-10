@@ -1,0 +1,222 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Header Styles */
+header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.title-container {
+    background-color: #0073e6;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+.yellow-text {
+    color: yellow;
+}
+
+.nav-container {
+    background-color: rgb(53, 53, 53);
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0.2rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    border: 1px solid white;
+}
+
+/* Main Content Styles */
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    gap: 1rem;
+}
+
+/* Card Styles */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card h2 {
+    background-color: #0073e6;
+    color: white;
+    text-align: center;
+    padding: 0.3rem;
+    border-radius: 8px 8px 0 0;
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Align text and image side by side */
+.content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+.card-text {
+    flex: 1;
+    padding: 1rem;
+}
+
+/* Profile Image Styles */
+.profile-image {
+    max-width: 180px;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin-left: auto;
+}
+
+/* Flag Image Styles */
+.flag-image {
+    max-width: 180px;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
+
+/* Highlight Styles */
+.highlight {
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer Styles */
+footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Highlight the last modified date in yellow */
+#lastModified {
+    color: yellow;
+    font-size: 1rem;
+}
+
+.card:nth-child(2) ul {
+    list-style-type: disc;
+    padding-left: 2.5rem;
+    text-align: left;
+    padding-top: 4.5rem;
+}
+
+.card:nth-child(2) li {
+    margin-top: 0.5rem;
+    margin-bottom: 0rem;
+}
+
+/* Media Query for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 1rem 0;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .content {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .profile-image,
+    .flag-image {
+        max-width: 120px;
+        margin: 0;
+    }
+
+    /* Adjust flag image position */
+    .flag-image {
+        margin-top: 1rem;
+        /* Push flag image down */
+    }
+
+    /* Add label under the flag image */
+    .flag-text {
+        font-size: 0.9rem;
+        color: #333;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+    .card-text {
+        margin-bottom: 1rem;
+    }
+}
+
+.line {
+    width
+}

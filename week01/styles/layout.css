@@ -1,0 +1,69 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    /* Remove default margin */
+    font-family: Arial, sans-serif;
+    /* Optional: Improve font readability */
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 10% auto 10%;
+    grid-template-columns: 20% 1fr 20%;
+    gap: 10px;
+    /* Optional: Add spacing between grid elements */
+}
+
+header {
+    grid-row: 1;
+    grid-column: 1 / span 3;
+    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    /* Add padding for spacing */
+}
+
+.heading-nav {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.heading-nav a {
+    margin: 0 20px;
+    /* Add spacing between links */
+    text-decoration: none;
+    /* Remove underline */
+    color: black;
+    /* Link color */
+    font-weight: bold;
+    /* Make links bold */
+}
+
+nav.left {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    background-color: rgb(24, 169, 169);
+}
+
+nav.right {
+    grid-row: 2;
+    grid-column: 3;
+    background-color: white;
+    /* Update background color */
+    padding: 10px;
+    /* Optional: Add padding inside the aside */
+}
+
+footer {
+    grid-row: 3;
+    grid-column: 1 / span 3;
+    background-color: black;
+    color: white;
+    text-align: center;
+}

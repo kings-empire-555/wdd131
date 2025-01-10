@@ -4,11 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Wisdom David">
+    <meta name="author" content="Wisdom David">
+    <link rel="stylesheet" href="styles/base.css">
+    <title>WDD 131 - Dynamic Web Fundamentals - Wisdom David</title>
+    <script src="getdates.js" defer></script>
 </head>
 
 <body>
-    <h1>WDD 131 - Wisdom David</h1>
+    <header>
+        <div class="title-container">
+            <h1>WDD 131 - Dynamic Web Fundamentals - <span class="yellow-text">Wisdom David</span></h1>
+        </div>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/wisdomdavid/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/ot/prov/12?lang=eng"
+                            target="_blank">Scripture</a></li>
+                    <li><a href="#">Final Project</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="content">
+                <div class="card-text">
+                    <p>My name is Wisdom David. I was born in Abuja, Nigeria and live with my family in Akwa Ibom State,
+                        Nigeria. I am currently a student of BYU-Pathway World. I love testing new technologies. I love
+                        making research. I love listening to music and playing video game.</p>
+                </div>
+                <img src="images/profile.jpg" class="profile-image" alt="Profile Image of Wisdom David">
+            </div>
+            <div class="content">
+                <div>
+                    <img src="images/nigeria.jpg" class="flag-image" alt="Nigeria Flag">
+                    <p class="flag-text">Official Flag of Nigeria</p>
+                </div>
+                <div class="card-text">
+                    <h3 class="highlight">Akwa Ibom, Nigeria</h3>
+                    <p>
+                        Nigeria is the most populous country in Africa and is located in West Africa along the Atlantic
+                        Ocean. It is home to over 250 ethnic groups and a rich cultural heritage, with landmarks like
+                        Zuma Rock and the Niger River. This nation is best known for its Nollywood film industry,
+                        Afrobeats music, and being Africa's largest oil producer.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span>💡Wisdom David💡Nigeria.</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        // Dynamically populate the current year
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+
+        // Dynamically populate the last modified date
+        document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+    </script>
+
 </body>
 
 </html>
